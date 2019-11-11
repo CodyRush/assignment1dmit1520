@@ -2,58 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Meme Generator</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Assignment 2 - Filtering Gallery</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Meme Generator</h1>
-        </header>
-        <main>
-            <section class="sidebar">
-                <h2>Meme Options</h2>
-                <div class="error"></div>
-                <form class="meme-form">
-                    <div class="form-control">
-                        <label for="meme-image">Meme Image</label>
-                        <select name="memeImage" id="meme-image">
-                            <option value="">Choose an image...</option>
-                            <option value="fry-meme">Fry Meme</option>
-                            <option value="one-does-not-simply-meme">One Does Not Simply Meme</option>
-                            <option value="most-interesting-man-meme">Most Interesting Man</option>
-                        </select>
-                    </div>
-                    <div class="form-control">
-                        <label for="meme-top-text">Top Text</label>
-                        <input type="text" name="memeTopText" id="meme-top-text">
-                    </div>
-                    <div class="form-control">
-                        <label for="meme-bottom-text">Bottom Text</label>
-                        <input type="text" name="memeBottomText" id="meme-bottom-text">
-                    </div>
-                    <div class="form-control">
-                        <input type="submit" value="Generate">
-                        <input type="reset" value="Reset">
-                    </div>
-                </form>
-            </section>
-            <section class="content">
-                <h2>Generated Meme</h2>
-                <div class="meme-display">
-                    <p class="top-text"></p>
-                    <p class="bottom-text"></p>
-                    <img src="https://via.placeholder.com/550x300?text=Choose+an+image+from+the+dropdown" alt="Placeholder Image">
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+            <form class="frm-filter">
+                <div class="frm-group">
+                    <a class="reset hidden" href="#">Reset</a>
+                    <input class="frm-control" type="text" id="filter" name="filter" placeholder="tag filter" />
                 </div>
-            </section>
-        </main>
+            </form>
+        </nav>
+        <section class="gallery">
+            <div class="row">
+                <h1>Gallery</h1>
+            </div>
+            <div class="row">
+                <div class="thumb-display">
+                    <img src="img/thumbs/african_road_to_the_mountain.jpg" alt="african road to the mountain" />
+                    <p class="tags">#africa #mountain #road</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/beach_and_palms.jpg" alt="beach and palms" />
+                    <p class="tags">#palmbeach #distantpeaks</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/beach_road.jpg" alt="beach road" />
+                    <p class="tags">#oceanbeach #mountainroad</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/calm_lake.jpg" alt="calm lake" />
+                    <p class="tags">#lake #clearskies #onthewater</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/fall_bridge.jpg" alt="fall bridge" />
+                    <p class="tags">#fallcolors #bridgecrossing #river</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/fall_colors.jpg" alt="fall colors" />
+                    <p class="tags">#fallcolors #slowdown</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/fall_road.jpg" alt="fall road" />
+                    <p class="tags">#falltrees</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/forest_road.jpg" alt="forest road" />
+                    <p class="tags">#ontheroad #falldriving</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/mountain_flowers.jpg" alt="mountain flowers" />
+                    <p class="tags">#mountainflowers #clouds #river</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/mountain_lake.jpg" alt="mountain lake" />
+                    <p class="tags">#mountainlake #retreat</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/mountain_storm_coming.jpg" alt="mountain storm coming" />
+                    <p class="tags">#stormcoming #thepeak</p>
+                </div>
+                <div class="thumb-display">
+                    <img src="img/thumbs/rocky_beach.jpg" alt="rocky beach" />
+                    <p class="tags">#perfectbeach #whitesand</p>
+                </div>
+            </div>
+        </section>
     </div>
-    
     <script src="js/main.js"></script>
 </body>
 
